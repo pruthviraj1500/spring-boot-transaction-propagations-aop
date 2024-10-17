@@ -20,7 +20,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping
-    public ResponseEntity<?> addUserDetails(@RequestBody List<User> users){
+    public ResponseEntity<?> addUserDetails(@RequestBody List<User> users) throws Exception {
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.addUsers(users));
     }
 
